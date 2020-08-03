@@ -1,6 +1,5 @@
 (function(){
     "use strict";
-
     /**
      * TODO:
      * Create an array of 4 people's names and store it in a variable called
@@ -51,21 +50,20 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
     var numbers = [1, 2, 3, 4, 5];
-
     function first(array) {
         console.log('returns the first item in the array: ' + array[0])
     }
-
     function second(array) {
         console.log('returns the second item in the array: ' + array[1])
     }
-
     function last(array) {
         console.log('returns the last item in the array: ' + array[parseInt(array.length - 1)])
     }
-
     first(numbers);
     second(numbers);
     last(numbers);
 })();
+
+
+
 
