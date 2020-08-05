@@ -157,6 +157,7 @@ console.log(person.sayHello());
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    //Used current book im reading
     function createBook(aTitle, authorName) {
         var names = authorName.split(" ");
         return {
