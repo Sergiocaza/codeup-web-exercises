@@ -1,35 +1,39 @@
-//function showMultiplicationTable(input){
-    //for (var x = 1; x < 11; x++){
-        //console.log((input + '*' + x + '=' + (input * x)))
-    //}
-//}
-//showMultiplicationTable(1);
-//showMultiplicationTable(2);
-//showMultiplicationTable(3);
-//showMultiplicationTable(4);
-//showMultiplicationTable(5);
-//showMultiplicationTable(6);
-//showMultiplicationTable(7);
-//showMultiplicationTable(8);
-//showMultiplicationTable(9);
-//showMultiplicationTable(10);
+// function showMultiplicationTable(input){
+//     for (var x = 1; x < 10; x++){
+//         console.log((input + '*' + x + '=' + (input * x)))
+//     }
+// }
+// showMultiplicationTable(1);
+// showMultiplicationTable(2);
+// showMultiplicationTable(3);
+// showMultiplicationTable(4);
+// showMultiplicationTable(5);
+// showMultiplicationTable(6);
+// showMultiplicationTable(7);
+// showMultiplicationTable(8);
+// showMultiplicationTable(9);
+// showMultiplicationTable(10);
 
 
-//for ( i = 1; i < 10; i++){
-  //  var randomNumber = Math.floor(Math.random() * 180) + 20;
-    //if (randomNumber % 2 === 0){
-      //  console.log( randomNumber + ' is an even number.');
-    //} else {
-      //  console.log( randomNumber + ' is an odd number.');
-    //}
-//}
+// for ( i = 1; i < 10; i++){
+//    var randomNumber = Math.floor(Math.random() * 180) + 20;
+//     if (randomNumber % 2 === 0){
+//        console.log( randomNumber + ' is an even number.');
+//     } else {
+//        console.log( randomNumber + ' is an odd number.');
+//     }
+// }
 
-//for (var i = 1; i <= 9; i++){
-  //  console.log(i.toString().repeat(i));
-//}
+// for (var i = 1; i <= 9; i++){
+//    console.log(i.toString().repeat(i));
+// }
 
-for ( i = 100; i >= 5; i --){
-    if (i % 5 === 0){
-        console.log(i);
-    }
+// for ( i = 100; i >= 5; i --){
+//     if (i % 5 === 0){
+//         console.log(i);
+//     }
+// }
+
+for (i = 100; i >= 5; i -=5){
+    console.log(i)
 }

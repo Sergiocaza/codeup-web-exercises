@@ -11,7 +11,7 @@ body {
     font-style: italic;
     text-align: center;
     list-style-position: inside;
-    background-image: url("/Users/sergiomuniz/IdeaProjects/codeup-web-exercises/img/photo-1511497584788-876760111969.jpeg");
+    background-image: url("../img/double-bubble.png");
 }
 h2 {
     text-decoration: underline;
@@ -20,11 +20,11 @@ ul, ol {
     list-style: none;
 }
 #company-morals {
-    background-image: url("img/photo-1511497584788-876760111969.jpeg");
     background-size: 660px;
     color: navy;
 }
 tr>td {
+    text-align: center;
     border: .5px solid black;
     margin-left:auto;
     margin-right:auto;
