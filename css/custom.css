@@ -1,0 +1,27 @@
+
+
+.btn-outline-success {
+    border-color: grey;
+    color: grey;
+}
+
+.btn-outline-success:hover {
+    background-color: grey;
+    border-color: grey;
+}
+
+.btn-outline-success:active {
+    color: grey;
+    border-color: grey;
+}
+
+#welcome-title{
+    background-color:rgba(255,255,255,0.7); /*the a with the rgb is allowing us to play with the color*/
+    text-align:center;
+}
+
+#main-jumbo {
+    background-image: url("../img/pizza.png");
+    background-size: cover;
+}
+   
