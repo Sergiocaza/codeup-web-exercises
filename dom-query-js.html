@@ -28,15 +28,27 @@
 <script>
     (function() {
         "use strict";
+
+        var jsCool = document.getElementById('js-cool');
+        var blue = document.getElementById('blue');
+        var colors = document.getElementById('colors');
+        var success = document.getElementById('success');
+
         // TODO: Uncomment next line and get the main header element by id
-        // var mainHeader = ;
+        var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        jsCool.addEventListener('click', function() {
+            mainHeader.innerHTML = "JavaScript is Cool";
+        });
 
         // TODO: Uncomment the next line and get the sub header element by id
-        // var subHeader = ;
+        var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
+        blue.addEventListener('click', function() {
+            subHeader.style.color = 'blue';
+        });
 
         // TODO: Uncomment the next line and get all list items
         // var listItems = ;
