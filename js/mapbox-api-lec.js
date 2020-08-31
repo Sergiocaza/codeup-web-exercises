@@ -3,6 +3,8 @@
  *********************************************/
 // TODO TOGETHER: Open .gitignore and add keys.js. Add keys.js file and import to mapbox html file. Your api keys are stored in keys.js and are added to the .gitignore so they are protected
 
+console.log('token: ' + mapboxToken);
+
 /**********************************************
  * 			CUSTOMIZING THE MAP
  *********************************************/
@@ -14,6 +16,13 @@
 
 //TODO TOGETHER: Set map to Dallas area using the coordinates [-96.8057, 32.7787]
 
+mapboxgl.accessToken = mapboxToken;
+// var map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+//     center: [-96.8057, 32.7787], // starting position [lng, lat]
+//     zoom: 9 // starting zoom
+// });
 
 
 
@@ -30,9 +39,17 @@
 //Use the .setLngLat() and .addTo() methods to add marker to the map
 
 
-// TODO TOGETHER: Add a marker to the map using the following coordinates [-96.8084, 32.7799]. This marker will mark the Sixth Floor Muesume on our map.
+// TODO TOGETHER: Add a marker to the map using the following coordinates [-96.8084, 32.7799]. This marker will mark the Sixth Floor Meusuem on our map.
 // TODO TOGETHER: Change the color of the marker
 
+// var markerOptions = {
+//     color: "red",
+//     draggable: true
+// };
+//
+// var markerMuseum = new mapboxgl.Marker(markerOptions)
+//     .setLngLat([-96.8084, 32.7799])
+//     .addTo(map);
 
 
 
@@ -51,11 +68,19 @@
 
 // TODO TOGETHER: Add a popup to the map over codeup. Set the html as a paragraph that says "Codeup Rocks!"
 
-
+// var popup = new mapboxgl.Popup()
+//     .setLngLat([-96.8084, 32.7799])
+//     .setHTML("<p>Codeup Rocks!</p>")
+//     .addTo(map)
 
 
 // TODO TOGETHER: Comment out the popup we just added. Add a popup to the Sixth Floor Musume marker.
 
+// var popupMuseum = new mapboxgl.Popup()
+//     .setHTML("<h1>Sixth Floor Museum</h1>")
+//     .addTo(map);
+//
+// markerMuseum.setPopup(popupMuseum);
 
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
 // TODO: Try setting the text by using ".setText()" instead of ".setHTML()"
@@ -70,9 +95,18 @@
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup. Comment out previous map code.
 
-
-
-
+geocode("701 Commerce St, Dallas, TX. 75202", mapboxToken).then(function(result) {
+    console.log(result);
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 16
+    });
+    //Right here add the code from the Todos below.
+    map.setCenter(result);
+    //map.jumpTo({center: result});
+    //map.flyTo({center: result});
+});
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 //TODO: Instead of setCenter try using map.jumpTo()
@@ -82,6 +116,9 @@
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -96.8084, lat: 32.7799} to get a physical address for the Sixth Floor Musume
 
+reverseGeocode({lng: -96.8084, lat: 32.7799}, mapboxToken).then(function(result){
+    console.log('reverseGeocode: ' + result);
+});
 
 
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
