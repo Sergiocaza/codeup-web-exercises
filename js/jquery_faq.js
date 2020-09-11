@@ -39,4 +39,12 @@ $(document).ready(function() {
     $('#toggle10').click(function() {
         $('#10').slideToggle();
     });
+
+    $(".highlight-last-li-button").click(function () {
+        $("ul").each(function(index) {
+            $(this).children().last().toggleClass("highlight");
+        })
+    })
+
 });
+
