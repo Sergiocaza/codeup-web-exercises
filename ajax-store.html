@@ -32,7 +32,7 @@
             //       HINT: Your data should come back as a JSON object; use console.log() to inspect
             //             its contents and fields
             //       HINT: You will want to target #insertProducts for your new HTML elements
-            $.get('data/inventory.json').done(function (data) {
+            $.get("data/inventory.json").done(function (data) {
                 data.forEach(function (item) {
                     $('#insertProducts').append(
                         '<tr>' +
@@ -44,8 +44,8 @@
                     )
                 });
 
-                $('.refresh').click(function () {
-                    $.get('data/inventory.json').done(function (data) {
+                $('#refresh').click(function () {
+                    $.get("data/inventory.json").done(function (data) {
                         $('#insertProducts').html('');
                         data.forEach(function (item) {
                             $('#insertProducts').append(
